@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="encriptador-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <div class="encriptador-items-container">
+                <div class="mensaje-inicial">
+                    <textarea placeholder="Ingrese el texto aqui" name="textoInicial" 
+                    id="texto-inicial" rows="12" spellcheck="false"></textarea>
+                </div>
+                <p id="restriccion-texto-ingresado">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </svg>
+                    Usar letras minusculas y sin acentos
+                </p>
+                <div class="btn-container">
+                    <button id="encriptar" class="btn-primary">Encriptar</button>
+                    <button id="desencriptar" class="btn-secundary">Desencriptar</button>
+                </div>
+            </div>  
+        </div>
+        <div class="texto-final-container">
+            <p style="display:none; overflow-wrap: break-word; height: 80%;" id="texto-final"></p>
+            <div class="mensaje-container">
+                <div class="mensaje-error-container">
+                    <img style="max-height: 500px; " src="assets/muneco.png" alt="mensaje-img">
+                    <h1 class="font-bold">Ningun mensaje fue encontrado</h1>
+                    <h3 class="font-normal">Ingrese el texto que desee encriptar o desencriptar</h3>
+                </div>
+            </div>
+            <button style="display: none" id="copiar-texto" 
+            click="copiarTexto" class="btn-secundary btn-copiar">Copiar</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <span>© 2022 Desarrollado por Salvador Sanabria Bernal | Oracle + AluraLatam. </span>
+            <div class="footer-links">
+                <a href="https://github.com/SalvadorS19" target="_blank">
+                    <img src="https://img.icons8.com/ios-glyphs/30/null/github.png"/>
+                </a>
+                <a href="https://www.linkedin.com/in/salvador-sanabria-bernal-746353255/" target="_blank">
+                    <img src="https://img.icons8.com/ios-glyphs/30/null/linkedin-circled--v1.png"/>
+                </a>
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>
+<script src="scripts.js"></script>
